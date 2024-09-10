@@ -8,10 +8,17 @@ O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos
 
 ![Backlog do Projeto H.E.M](jira.png)
 
-## Links Importantes
+- **Jira:** [Acesse o quadro de projeto aqui](https://unicap-team-slife.atlassian.net/jira/software/projects/SCRUM/boards/1)
+
+
+## Screencast Figma
+
+Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E.M:
+
+[Screencast Figma](https://vimeo.com/1008218598?share=copy)
 
 - **Design no Figma:** [Acesse o design aqui](https://www.figma.com/design/QYBP6Imj2G5svue2oD7ptj/H.E.M?m=auto&t=DkIXqvCKssu7uQRm-6)
-- **Jira:** [Acesse o quadro de projeto aqui](https://unicap-team-slife.atlassian.net/jira/software/projects/SCRUM/boards/1)
+
 
 ## Equipe do Projeto
 
