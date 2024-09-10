@@ -12,6 +12,8 @@ O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos
 
 ## Visualização do Projeto
 
+As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realizamos um controle dos critérios de aceitação e da implementação em um modelo protótipo no figma.
+
 ![Backlog do Projeto H.E.M](jira.png)
 
 - **Jira:** [Acesse o quadro de projeto aqui](https://unicap-team-slife.atlassian.net/jira/software/projects/SCRUM/boards/1)
