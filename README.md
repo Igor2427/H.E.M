@@ -4,6 +4,12 @@
 
 O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos. Nosso objetivo é ajudar os usuários a encontrar um médico que atenda às suas necessidades específicas, acompanhar sua evolução clínica e armazenar dados importantes sobre sua saúde. Além disso, oferecemos uma plataforma para que médicos possam ser mais reconhecidos e divulgados através do nosso sistema de avaliação.
 
+## Tecnologias usadas
+
+- Figma
+- Jira
+- Vimeo
+
 ## Visualização do Projeto
 
 ![Backlog do Projeto H.E.M](jira.png)
