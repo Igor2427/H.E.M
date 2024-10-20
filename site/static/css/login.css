@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh; /* Ocupa toda a altura da janela */
+    display: flex; /* Define o layout flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #F5F5F5; /* Fundo claro */
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    max-width: 400px; /* Largura máxima da caixa */
+    width: 100%; /* Ajusta a largura para caber em dispositivos menores */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(234, 234, 234, 1); /* Cor acinzentada */
+}
+
+input:focus {
+    border: 2px solid rgba(21, 154, 156, 1); /* Destaque da borda */
+    outline: none;
+    background-color: white; /* Fundo branco ao focar */
+}
+
+.form-links {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-links a {
+    color: rgba(21, 154, 156, 1);
+    text-decoration: none;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+.btn-entrar {
+    background-color: rgba(21, 154, 156, 1);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-entrar:hover {
+    background-color: rgba(21, 154, 156, 0.9);
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
