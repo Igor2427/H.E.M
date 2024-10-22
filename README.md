@@ -43,11 +43,11 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 
 **Diagrama de cadastro e login:**
 
-![Backlog do Projeto H.E.M](siagramaCadastro-login.png)
+![](diagramaCadastro-login.jpg)
 
 **Diagrama de seleção médica:**
 
-![Backlog do Projeto H.E.M](seleçãoMédica.png)
+![](seleçãoMédica.jpg)
 
 ## Equipe do Projeto
 
