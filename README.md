@@ -17,15 +17,20 @@ O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos
 
 As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realizamos um controle dos critérios de aceitação e da implementação em um modelo protótipo no figma.
 
-**Sprint 1 Jira com o objetivo de criar as histórias:**
+**Sprint 1 - Jira com o objetivo de criar as histórias:**
 
 ![Backlog do Projeto H.E.M](jira.png)
 
-**Sprint 2 Jira com três implementações de histórias:
+**Sprint 1 - Quadro finalizado:**
+
+![](QuadroSprint1Finalizaso.png)
+
+**Sprint 2 - Jira com três implementações de histórias:**
 1- Cadastro
 2-Login
-3-Procurar médicos**
+3-Procurar médicos
 
+![](Sprint2Jira.png)
 
 
 - **Jira:** [Acesse o quadro de projeto aqui](https://unicap-team-slife.atlassian.net/jira/software/projects/SCRUM/boards/1)
