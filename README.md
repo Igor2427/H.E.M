@@ -23,7 +23,7 @@ As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realiz
 
 **Sprint 1 - Quadro finalizado:**
 
-![](QuadroSprint1Finalizaso.png)
+![](QuadroSprint1Finalizado.png)
 
 **Sprint 2 - Jira com três implementações de histórias:**
 1- Cadastro
