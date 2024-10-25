@@ -29,7 +29,6 @@ As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realiz
 **Sprint 2 - Jira com três implementações de histórias:**
 1- Cadastro
 2-Login
-3-Procurar médicos
 
 ![](Sprint2Jira.png)
 
