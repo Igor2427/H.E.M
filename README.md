@@ -27,8 +27,8 @@ As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realiz
 ![](QuadroSprint1Finalizado.png)
 
 **Sprint 2 - Jira com três implementações de histórias:**
-1- Cadastro
-2-Login
+1 - Cadastro
+2 - Login
 
 ![](Sprint2Jira.png)
 
