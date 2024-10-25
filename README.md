@@ -9,12 +9,29 @@ O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos
 - Figma
 - Jira
 - Vimeo
+- HTML
+- CSS
+- JS
 
 ## Visualização do Projeto
 
 As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realizamos um controle dos critérios de aceitação e da implementação em um modelo protótipo no figma.
 
+**Sprint 1 - Jira com o objetivo de criar as histórias:**
+
 ![Backlog do Projeto H.E.M](jira.png)
+
+**Sprint 1 - Quadro finalizado:**
+
+![](QuadroSprint1Finalizado.png)
+
+**Sprint 2 - Jira com três implementações de histórias:**
+1- Cadastro
+2-Login
+3-Procurar médicos
+
+![](Sprint2Jira.png)
+
 
 - **Jira:** [Acesse o quadro de projeto aqui](https://unicap-team-slife.atlassian.net/jira/software/projects/SCRUM/boards/1)
 
@@ -27,6 +44,15 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 
 - **Design no Figma:** [Acesse o design aqui](https://www.figma.com/design/QYBP6Imj2G5svue2oD7ptj/H.E.M?m=auto&t=DkIXqvCKssu7uQRm-6)
 
+## Diagrama de Atividades
+
+**Diagrama de cadastro e login:**
+
+![](diagramaCadastro-login.jpg)
+
+**Diagrama de seleção médica:**
+
+![](seleçãoMédica.jpg)
 
 ## Equipe do Projeto
 
@@ -34,3 +60,6 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 - João Carlos
 - Arthur Felipe
 - Maurício
+- Julia Souto
+- Guilherme Brito
+- Gabriel Bezerra
