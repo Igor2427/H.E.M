@@ -60,6 +60,6 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 - João Carlos
 - Arthur Felipe
 - Maurício
-- Julia Souto
+- Julia Silva Souto
 - Guilherme Brito
 - Gabriel Bezerra
