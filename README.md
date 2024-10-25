@@ -59,7 +59,7 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 - Igor Gabriel
 - João Carlos
 - Arthur Felipe
-- Maurício
+- Maurício Henriques
 - Julia Silva Souto
 - Guilherme Brito
 - Gabriel Bezerra
