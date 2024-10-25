@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../static/css/pre_registro.css">
 </head>
 <body class="background-general">
-    <a href="login.html" class="back-button">
+    <a href="{% url 'login' %}" class="back-button">
         <span class="back-icon">&lt;</span>
     </a>
 
@@ -18,10 +18,10 @@
 
         <!-- Botões de seleção -->
         <div class="button-group">
-            <a href="registro_paciente.html">
+            <a href="{% url 'registro_paciente' %}">
                 <button class="btn-selecionar">PACIENTE</button>
             </a>
-            <a href="registro_medico.html">
+            <a href="{% url 'registro_medico' %}">
                 <button class="btn-selecionar">MÉDICO</button>
             </a>
         </div>

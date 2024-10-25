@@ -9,13 +9,14 @@
 </head>
 <body class>
     <!-- Botão de Voltar -->
-    <a href="login.html" class="back-button">
+    <a href="{% url 'login' %}" class="back-button">
         <span class="back-icon">&lt;</span>
     </a>
 
     <!-- Container para o formulário de registro -->
     <div class="register-form-container">
-        <form class="register-form">
+        <form class="register-form" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="cpf">CPF</label>
                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">

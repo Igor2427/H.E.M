@@ -1,0 +1,110 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: rgba(21, 154, 156, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-content h1 {
+    margin-left: 10px;
+}
+
+.header-icons {
+    display: flex;
+}
+
+.icon-btn {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Cartões dos médicos */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.medico-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.medico-info {
+    flex: 1;
+}
+
+.medico-info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.especialidade {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.avaliacao {
+    color: #FFD700;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(21, 154, 156, 1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer-icon {
+    display: inline-block;
+}
+
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-icon.active img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}

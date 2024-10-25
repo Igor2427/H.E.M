@@ -9,7 +9,7 @@
 </head>
 <body class="background-general">
     <div class="login-container">
-        <form class="login-form">
+        <form class="login-form" method="post" action="{% url 'login' %}">
             <div class="form-group">
                 <label for="cpf">CPF</label>
                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
@@ -21,13 +21,13 @@
             </div>
 
             <div class="form-links">
-                <a href="esqueceu_senha.html">Esqueceu a senha?</a>
+                <a href="{% url 'esqueceu_senha' %}">Esqueceu a senha?</a>
             </div>
 
             <button type="submit" class="btn-entrar">ENTRAR</button>
 
             <div class="form-links">
-                <a href="pre_registro.html">Não possui uma conta? Registre-se</a>
+                <a href="{% url 'pre_registro' %}">Não possui uma conta? Registre-se</a>
             </div>
         </form>
     </div>
