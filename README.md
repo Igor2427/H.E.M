@@ -12,6 +12,7 @@ O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos
 - HTML
 - CSS
 - JS
+- Django 
 
 ## Visualização do Projeto
 
