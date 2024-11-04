@@ -30,9 +30,34 @@
                 <p class="descricao">Sou o Dr. Lucas Andrade, clínico geral. Tenho anos de experiência em medicina, oferecendo cuidados personalizados com um enfoque cuidadoso e empático.</p>
                 <div class="avaliacao">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <button class="but_avaliar" id="but">Avaliar</button>
                 </div>
             </div>
         </section>
+
+        <!-- Conteúdo das avaliações - Tela para avaliar -->
+        <div class="avaliar-info">
+            <button class="close-avalia">X</button>
+            <h2>Avaliar medico</h2>
+
+            <h5>Deixe uma avaliação</h5>
+            <div class="star-rating">
+                <div class="stars">
+                  <label class="number"><input type="radio" name="rating" value="0"></label>
+                  <label class="star"><input type="radio" name="rating" value="1"></label>
+                  <label class="star"><input type="radio" name="rating" value="2"></label>
+                  <label class="star"><input type="radio" name="rating" value="3" checked></label>
+                  <label class="star"><input type="radio" name="rating" value="4"></label>
+                  <label class="star"><input type="radio" name="rating" value="5"></label>
+                  <div class="number-rating"></div>
+                </div>
+            </div>
+
+            <div class="sessao-comentario">
+                <h5>Deixe um comentario (opcional):</h5>
+                <textarea class="form-group" id="comentario" name="comentario" rows="4" cols="50" placeholder="Deixe um comentario (opcional)"> </textarea>
+            </div>
+        </div>
 
         <section class="medico-card">
             <img src="clara_moreira.jpg" alt="Clara Moreira" class="profile-pic">
@@ -42,6 +67,7 @@
                 <p class="descricao">Sou a Dra. Clara Moreira, neurocirurgiã especializada em procedimentos complexos e tratamentos avançados. Minha missão é oferecer cuidados precisos e inovadores para melhorar a qualidade de vida dos meus pacientes.</p>
                 <div class="avaliacao">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    <button class="but_avaliar" id="but">Avaliar</button>
                 </div>
             </div>
         </section>
@@ -55,6 +81,6 @@
         <a href="#" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="../static/js/home_medico.js"></script>
 </body>
 </html>
