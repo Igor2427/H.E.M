@@ -48,3 +48,10 @@ def registro(request):
             medico = Medico(cpf=cpf, nome=nome, email=email, especialidade=especialidade, crm=crm, senha=senha)
             medico.save()
 
+def medicos(request):
+    medicos = Medico.objects.all().values()
+    template = loader.get_template('home_paciente.html')
+    context = {
+        'medicos': medicos,
+    }
+    return HttpResponse(template.render(context, request))
