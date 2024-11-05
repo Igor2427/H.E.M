@@ -24,5 +24,6 @@ urlpatterns = [
     path('registro-paciente/', views.registro_paciente, name="registro_paciente"),
     path('registro-medic/', views.registro_medico, name="registro_medico"),
     path('home-medico/', views.home_medico, name='home_medico'),
+    path('home-paciente/', views.medicos, name='home_paciente'),
     path('admin/',admin.site.urls)
 ]
