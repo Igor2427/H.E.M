@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/home_paciente.css">
+    <link rel="stylesheet" href="../static/css/general.css">
+</head>
+<body>
+    {% csrf_token %}
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>HOME</h1>
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
+                <a href="#" class="icon-btn"><img src="search_icon.png" alt="Buscar"></a>
+            </div>
+        </div>
+    </header>
+    
+        <!-- Conteúdo principal - Cartões dos médicos -->
+    <div class="container">
+        <main>            
+            {% for x in medicos %}
+                <section class="medico-card">
+                    <img src="icon_profile.jpg" alt="{{x.nome}}" class="profile-pic">
+                    <div class="medico-info">
+                        <h2>{{x.nome}}</h2>
+                        <p class="especialidade">{{x.especialidade}}</p>
+                        <p class="descricao">Descrição do médico</p>
+                    </div>
+                </section>
+            {% endfor %}
+        </main>
+            
+        <!-- Footer -->
+    <footer>
+        <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
+        <a href="#" class="footer-icon active"><img src="icon_home.png" alt="Home"></a>
+        <a href="#" class="footer-icon"><img src="icon_message.png" alt="Mensagens"></a>
+        <a href="#" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
+    </footer>
+    </div>
+</body>
