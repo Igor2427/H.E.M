@@ -15,7 +15,8 @@
 
     <!-- Container para o formulário de registro do médico -->
     <div class="register-form-container">
-        <form class="register-form">
+        <form class="register-form" method="post" action="{% url 'registro_med' %}">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="cpf">CPF</label>
                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">

@@ -15,7 +15,7 @@
 
     <!-- Container para o formulário de registro -->
     <div class="register-form-container">
-        <form class="register-form" method="post" action="{% url 'login' %}">
+        <form class="register-form" method="post" action="{% url 'registro_pac' %}">
             {% csrf_token %}
             <div class="form-group">
                 <label for="cpf">CPF</label>

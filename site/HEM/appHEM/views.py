@@ -1,17 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import Medico, Paciente
+from django.contrib import messages
 
 # Create your views here.
 def login(request):
     if request.method == 'POST':
-        cpf = request.POST['cpf']
+        cpf = request.POST.get('cpf')
+        senha = request.POST.get('senha')
 
-        if Medico.objects.filter(cpf=cpf).exists():
+        if Medico.objects.filter(cpf=cpf).exists() and Medico.objects.filter(senha=senha).exists:
             return redirect('home_medico')
-        elif Paciente.objects.filter(cpf=cpf).exists():
+        elif Paciente.objects.filter(cpf=cpf).exists() and Paciente.objects.filter(senha=senha).exists:
             return redirect('home_paciente')
         else:
-            return render(request, 'login.html', {'erro': 'Usuário não encontrado!'})
+            messages.error(request, 'Usuário não encontrado!')
+            return render(request, 'login.html')
     return render(request, 'login.html')
 
 def esqueceu_senha(request):
@@ -29,24 +32,34 @@ def registro_medico(request):
 def home_medico(request):
     return render(request, 'home_medico.html')
 
-def registro(request):
+def registro_med(request):
     if request.method == 'POST':
         cpf = request.POST.get('cpf')
-        nome = request.POST.get('nome')
         email = request.POST.get('email')
+        nome = request.POST.get('nome')
         senha = request.POST.get('senha')
+        crm = request.POST.get('crm')
+        especialidade = request.POST.get('especialidade')
 
-        if 'paciente' in request.POST:
-            paciente = Paciente()
-            paciente = Paciente(cpf=cpf, nome=nome, email=email, senha=senha)
-            paciente.save()
+        medico = Medico(cpf=cpf, email=email, nome=nome, senha=senha, crm=crm, especialidade=especialidade)
+        medico.save()
+
+        return redirect('login')
+    return render(request, 'registro_paciente.html')
+
+def registro_pac(request):
+    if request.method == 'POST':
+        cpf = request.POST.get('cpf')
+        email = request.POST.get('email')
+        nome = request.POST.get('nome')
+        senha = request.POST.get('senha')
         
-        elif 'medico' in request.POST:
-            medico = Medico()
-            especialidade = request.POST.get('especialidade')
-            crm = request.POST.get('crm')
-            medico = Medico(cpf=cpf, nome=nome, email=email, especialidade=especialidade, crm=crm, senha=senha)
-            medico.save()
+
+        paciente = Paciente(cpf=cpf, email=email, nome=nome, senha=senha)
+        paciente.save()
+
+        return redirect('login')
+    return render(request, 'registro_paciente.html')
 
 def medicos(request):
     medicos = Medico.objects.all().values()

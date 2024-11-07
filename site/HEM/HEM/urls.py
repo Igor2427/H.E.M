@@ -22,8 +22,11 @@ urlpatterns = [
     path('esqueceu-senha/', views.esqueceu_senha, name="esqueceu_senha"),
     path('pre-registro/', views.pre_registro, name="pre_registro"),
     path('registro-paciente/', views.registro_paciente, name="registro_paciente"),
-    path('registro-medic/', views.registro_medico, name="registro_medico"),
+    path('registro-medico/', views.registro_medico, name="registro_medico"),
     path('home-medico/', views.home_medico, name='home_medico'),
     path('home-paciente/', views.medicos, name='home_paciente'),
-    path('admin/',admin.site.urls)
+    path('registro-med/', views.registro_med, name='registro_med'),
+    path('registro-pac/', views.registro_pac, name='registro_pac'),
+    path('login/', views.login, name="login"),
+    path('admin/',admin.site.urls),
 ]

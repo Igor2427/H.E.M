@@ -10,6 +10,7 @@
 <body class="background-general">
     <div class="login-container">
         <form class="login-form" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="cpf">CPF</label>
                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
