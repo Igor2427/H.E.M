@@ -15,7 +15,20 @@
             <h1>HOME</h1>
             <div class="header-icons">
                 <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
-                <a href="#" class="icon-btn"><img src="search_icon.png" alt="Buscar"></a>
+                <form action="." method="get">
+                    <select id="opcoes" class="icon-btn" name="opcoes">
+                        <option value="" selected="selected">Buscar</option>
+                        <option value="Anestesista">Anestesista</option>
+                        <option value="Clínico Geral">Clínico Geral</option>
+                        <option value="Dermatologista">Dermatologista</option>
+                        <option value="Neurocirurgiã">Neurocirurgiã</option>
+                        <option value="Oftalmologista">Oftalmologista</option>
+                    </select>
+                    <input type="submit" id="opcoes">
+                </form>
+            </div>
+            <div class="header-icons">
+                <a href="#" class="icon-btn">Favoritos</a>
             </div>
         </div>
     </header>
@@ -44,7 +57,7 @@
         <!-- Footer -->
     <footer>
         <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
-        <a href="#" class="footer-icon active"><img src="icon_home.png" alt="Home"></a>
+        <a href="{% url 'home_paciente' %}" class="footer-icon active"><img src="icon_home.png" alt="Home"></a>
         <a href="#" class="footer-icon"><img src="icon_message.png" alt="Mensagens"></a>
         <a href="#" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
     </footer>
