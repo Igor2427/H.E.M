@@ -66,19 +66,16 @@ def registro_pac(request):
 
 def medicos(request):
     medicos = Medico.objects.all().values()
+    if request.method=='GET' and request.GET.get('opcoes') != None:
+        esp = request.GET.get('opcoes')
+        if esp != '':
+            medicos = Medico.objects.filter(especialidade=esp).values()
+    elif  request.method=='GET' and request.GET.get('busca') != None:
+        nom = request.GET.get('busca')
+        if nom != '':
+            medicos = Medico.objects.filter(nome__icontains=nom).values()        
     template = loader.get_template('home_paciente.html')
     context = {
         'medicos': medicos,
     }
-    if request.method=='GET' and request.GET.get('opcoes') != None:
-        print("olaaa")
-        esp = request.GET.get('opcoes')
-        print(esp)
-        if esp != '':
-            medicos = Medico.objects.filter(especialidade=esp).values()
-        template = loader.get_template('home_paciente.html')
-        context = {
-            'medicos': medicos,
-        }    
-
     return HttpResponse(template.render(context, request))
