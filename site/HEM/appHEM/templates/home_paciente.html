@@ -15,10 +15,16 @@
             <h1>HOME</h1>
             <div class="header-icons">
                 <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
+                <a href="#" class="icon-btn"><img src="icon_search.png" alt="Buscar"></a>
+                <form action="." method="get">
+                    <input type="search" id="busca" name="busca" placeholder="Buscar pelo nome">
+                    <input type="submit">
+                </form>
                 <form action="." method="get">
                     <select id="opcoes" class="icon-btn" name="opcoes">
                         <option value="" selected="selected">Buscar</option>
                         <option value="Anestesista">Anestesista</option>
+                        <option value="Cirurgião Geral">Cirurgião Geral</option>
                         <option value="Clínico Geral">Clínico Geral</option>
                         <option value="Dermatologista">Dermatologista</option>
                         <option value="Neurocirurgiã">Neurocirurgiã</option>
@@ -26,9 +32,6 @@
                     </select>
                     <input type="submit" id="opcoes">
                 </form>
-            </div>
-            <div class="header-icons">
-                <a href="#" class="icon-btn">Favoritos</a>
             </div>
         </div>
     </header>
