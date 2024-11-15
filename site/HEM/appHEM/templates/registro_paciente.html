@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,28 +21,28 @@
             {% csrf_token %}
             <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
+                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" pattern="\d{11}" title="O CPF deve ter 11 dígitos" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email">
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
             </div>
 
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
             </div>
 
             <div class="form-group">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </div>
 
             <button type="submit" class="btn-registrar">REGISTRAR</button>
         </form>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="{% static '../static/js/scripts.js' %}"></script>
 </body>
 </html>

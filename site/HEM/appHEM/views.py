@@ -11,12 +11,12 @@ def login(request):
         cpf = request.POST.get('cpf')
         senha = request.POST.get('senha')
 
-        if Medico.objects.filter(cpf=cpf).exists() and Medico.objects.filter(senha=senha).exists:
+        if Medico.objects.filter(cpf=cpf, senha=senha).first():
             return redirect('home_medico')
-        elif Paciente.objects.filter(cpf=cpf).exists() and Paciente.objects.filter(senha=senha).exists:
+        elif Paciente.objects.filter(cpf=cpf, senha=senha).first():
             return redirect('home_paciente')
         else:
-            messages.error(request, 'Usuário não encontrado!')
+            messages.error(request, 'Usuário não encontrado ou senha incorreta!')
             return render(request, 'login.html')
     return render(request, 'login.html')
 
