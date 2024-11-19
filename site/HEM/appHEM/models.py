@@ -15,3 +15,4 @@ class Medico(models.Model):
     senha = models.CharField(max_length=30, blank=False, null=False)
     crm = models.CharField(max_length=8, blank=False, null=False)
     especialidade = models.TextField(max_length=120, blank=False, null=False)
+    descricao = models.TextField(max_length=250, blank=True, default="Descrição")
