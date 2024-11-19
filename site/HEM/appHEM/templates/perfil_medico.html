@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/perfil.css">
+    <link rel="stylesheet" href="../static/css/general.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PERFIL</h1>
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
+                <a href="{% url 'home_medico' %}" class="icon-btn"><img src="icon_search.png" alt="Buscar"></a>
+            </div>
+        </div>
+    </header>
+
+    <div >
+        <main>
+            <section class="perfil-card">
+                <img src="icon_profile.jpg" alt="{{med.nome}}" class="picture">
+            
+                <div class="card-info">
+                    <h2>{{med.nome}}</h2>                    
+                    <p >{{med.cpf}}</p>
+                    <p class="descricao">{{med.descricao}}</p>
+                </div>
+                  
+            </section>
+        </main>
+        
+        
+        <form action="." method="post">
+            <p><label for="desc">Descrição:</label></p>
+            {% csrf_token %}
+            <textarea id="desc" name="desc">{{med.descricao}}</textarea>
+            <input type="submit" id="desc">
+        </form>
+    
+    </div>
+
+    <footer>
+        <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
+        <a href="{% url 'home_medico' %}" class="footer-icon"><img src="icon_home.png" alt="Home"></a>
+        <a href="#" class="footer-icon"><img src="icon_message.png" alt="Mensagens"></a>
+        <a href="#" class="footer-icon active"><img src="icon_profile.png" alt="Perfil"></a>
+    </footer>
+
+</body>
