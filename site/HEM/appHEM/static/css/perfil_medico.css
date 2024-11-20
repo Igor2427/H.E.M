@@ -1,0 +1,104 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Header */
+header {
+    background-color: rgba(21, 154, 156, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    margin-top: -38%;
+}
+
+.header-content h1 {
+    text-align: center;
+    /*margin-left: 10px;*/
+}
+
+.header-icons {
+    display: inline-block;
+    /*display: flex;*/
+}
+
+.icon-btn {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+/* Perfil */
+main {
+    flex: 1;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.perfil-card{
+    background-color: white;
+    align-items: baseline;
+}
+.perfil-info {
+    flex: 1;
+    display: flex;
+}
+
+.perfil-info img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(21, 154, 156, 1);
+	border-radius: 50%;
+    margin-right: 30px;
+}
+.edit-btn{
+    background-color: rgb(231, 232, 234);
+    border: 2px solid rgb(231, 232, 234);
+    border-radius: 50%;
+}
+
+.ps {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Footer */
+footer {
+    background-color: rgba(21, 154, 156, 1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    margin-bottom: -42%;
+    width: 100%;
+}
+
+.footer-icon {
+    display: inline-block;
+}
+
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-icon.active img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
