@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/perfil_medico.css">
+    <link rel="stylesheet" href="../static/css/general.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PERFIL</h1>
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
+                <a href="{% url 'home_paciente' %}" class="icon-btn"><img src="icon_search.png" alt="Buscar"></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="perfil-card">
+
+        <a href="{% url 'edit_paciente' %}"> 
+            <button>edit</button>
+        </a>
+    
+        <div class="perfil-info">
+            <img src="icon_profile.jpg" alt="{{med.nome}}" >
+            
+            <div class="ps">
+                <h2>{{pac.nome}}</h2>
+                <p >{{pac.cpf}}</p>
+                <p >{{pac.email}}</p>
+            </div>
+            
+        </div>
+            
+    </main>
+                
+
+    <footer>
+        <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
+        <a href="{% url 'home_paciente' %}" class="footer-icon"><img src="icon_home.png" alt="Home"></a>
+        <a href="#" class="footer-icon"><img src="icon_message.png" alt="Mensagens"></a>
+        <a href="#" class="footer-icon active"><img src="icon_profile.png" alt="Perfil"></a>
+    </footer>
+
+</body>
+</html>
