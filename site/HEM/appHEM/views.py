@@ -120,3 +120,21 @@ def edit_medico(request):
         med.save()
         return redirect('perfil_medico')
     return HttpResponse(template.render(context, request))
+
+def edit_paciente(request):
+    # pegando os dados para por no perfil
+    cpf_logged = request.session.get('cpf_logged')
+    pac = Paciente.objects.get(cpf=cpf_logged)
+    template = loader.get_template('edit_paciente.html')
+    context = {
+        'pac': pac,
+    }
+
+    # dando update na descricao
+    if request.method=='POST':
+        nome = request.POST.get('nom')
+        if nome != None:
+            pac.nome = nome
+        pac.save()
+        return redirect('perfil_paciente')
+    return HttpResponse(template.render(context, request))
