@@ -111,8 +111,12 @@ def edit_medico(request):
     }
     # dando update na descricao
     if request.method=='POST':        
+        nome = request.POST.get('nom')
         descri = request.POST.get('desc')
-        med.descricao = descri
+        if descri != None:
+            med.descricao = descri
+        if nome != None:
+            med.nome = nome
         med.save()
         return redirect('perfil_medico')
     return HttpResponse(template.render(context, request))
