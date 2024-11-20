@@ -28,6 +28,7 @@ urlpatterns = [
     path('registro-med/', views.registro_med, name='registro_med'),
     path('registro-pac/', views.registro_pac, name='registro_pac'),
     path('perfil-medico/', views.dados_med, name='perfil_medico'),
+    path('edit-medico/', views.edit_medico, name='edit_medico'),
     path('login/', views.login, name="login"),
     path('admin/',admin.site.urls),
 ]
