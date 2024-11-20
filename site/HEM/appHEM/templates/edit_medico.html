@@ -26,7 +26,12 @@
         <div class="perfil-info">
             <img src="icon_profile.jpg" alt="{{med.nome}}" >
             <div class="ps">
-                <h2>{{med.nome}}</h2>
+                <form action="." method="post">
+                    <p><label for="nom">Editar Nome:</label></p>
+                    {% csrf_token %}
+                    <textarea id="nom" name="nom">{{med.nome}}</textarea>
+                    <input type="submit" id="nom">
+                </form>
                 <p >{{med.cpf}}</p>
                 <p >{{med.email}}</p>
                 <p >{{med.crm}}</p>
