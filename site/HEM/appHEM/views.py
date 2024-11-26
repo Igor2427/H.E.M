@@ -73,7 +73,28 @@ def medicos(request):
     elif  request.method=='GET' and request.GET.get('busca') != None:
         nom = request.GET.get('busca')
         if nom != '':
-            medicos = Medico.objects.filter(nome__icontains=nom).values()        
+            medicos = Medico.objects.filter(nome__icontains=nom).values()
+    elif request.method=='GET' and request.GET.get('fav') != None:
+        id_med = request.GET.get('fav') # cpf do medico q vc selecionou
+        cpf_logged = request.session.get('cpf_logged')
+        checkFav = Favoritos.objects.filter(cpf_med=id_med,cpf_pac=cpf_logged).values()
+        medFav = Medico.objects.get(cpf=id_med)
+        pacFav = Paciente.objects.get(cpf=cpf_logged)
+        if checkFav.exists(): 
+            hey = Favoritos.objects.get(cpf_med=id_med,cpf_pac=cpf_logged)
+            Favoritos.objects.filter(id=hey.id).delete()
+        else:
+            novo_fav = Favoritos(cpf_med=medFav, cpf_pac=pacFav)
+            novo_fav.save()
+        return redirect('home_paciente')
+    elif request.method=='GET' and request.GET.get('showfavs')!=None:
+        cpf_logged = request.session.get('cpf_logged')
+        show = request.GET.get('showfavs')
+        meds = Favoritos.objects.filter(cpf_pac=cpf_logged).values_list('cpf_med')
+        if show == 'favoritos':            
+            medicos = Medico.objects.filter(cpf__in=meds).values()
+        elif show == 'naofavs':
+            medicos = Medico.objects.exclude(cpf__in=meds).values()
     template = loader.get_template('home_paciente.html')
     context = {
         'medicos': medicos,
