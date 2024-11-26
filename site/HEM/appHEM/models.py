@@ -16,3 +16,7 @@ class Medico(models.Model):
     crm = models.CharField(max_length=8, blank=False, null=False)
     especialidade = models.TextField(max_length=120, blank=False, null=False)
     descricao = models.TextField(max_length=250, blank=True, default="Descrição")
+
+class Favoritos(models.Model):
+    cpf_med = models.ForeignKey(Medico,on_delete=models.CASCADE)
+    cpf_pac = models.ForeignKey(Paciente,on_delete=models.CASCADE)
