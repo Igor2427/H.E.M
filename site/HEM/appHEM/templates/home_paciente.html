@@ -33,6 +33,14 @@
                     <input type="submit" id="opcoes">
                 </form>
             </div>
+            <form action="." method="get">
+                <select id="showfavs" name="showfavs">
+                    <option value="" selected="selected">Todos</option>
+                    <option value="favoritos">Favoritos</option>
+                    <option value="naofavs">Não Favoritos</options>
+                </select>
+                <input type="submit" id="showfavs">
+            </form>
         </div>
     </header>
     
@@ -45,12 +53,12 @@
                     <div class="medico-info">
                         <h2>{{x.nome}}</h2>
                         <p class="especialidade">{{x.especialidade}}</p>
-                        <p class="descricao">Descrição do médico</p>
+                        <p class="descricao">{{x.descricao}}</p>
 
-                        <label class="btn-fav">                     
-                            <input type="checkbox">
-                            <span>♥</span>
-                        </label>
+                        <form action="." method="get" id="fav" name="fav" >
+                            <input type="hidden" id="fav" name="fav" value="{{x.cpf}}">
+                            <input type="submit" value="♥">
+                        </form>
                         
                     </div>
                 </section>
@@ -62,7 +70,7 @@
         <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
         <a href="{% url 'home_paciente' %}" class="footer-icon active"><img src="icon_home.png" alt="Home"></a>
         <a href="#" class="footer-icon"><img src="icon_message.png" alt="Mensagens"></a>
-        <a href="#" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
+        <a href="{% url 'perfil_paciente' %}" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
     </footer>
     </div>
 </body>
