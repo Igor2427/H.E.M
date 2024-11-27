@@ -159,3 +159,80 @@ def edit_paciente(request):
         pac.save()
         return redirect('perfil_paciente')
     return HttpResponse(template.render(context, request))
+
+
+def mensagens_pac(request):
+    cpf_logged = request.session.get('cpf_logged') # cpf do usuario atual
+    cpf_med = request.session.get('cpf_med') # cpf do medico da conversa atual
+    #print(cpf_logged,cpf_med)
+    chat_med = Medico.objects.get(cpf=cpf_med) # medico atual
+    chat_pac = Paciente.objects.get(cpf=cpf_logged) # paciente atual
+    # postar mensagem nova
+    if request.method=='POST' and request.POST.get('message')!='': # se a mensagem não for nula
+        conteudo_mensagem = request.POST.get('message') # conteudo da mensagem
+        # nova mensagem
+        nova_mensagem = Mensagem(cpf_med=chat_med, cpf_pac=chat_pac, autor=cpf_logged, conteudo=conteudo_mensagem)
+        # salvar nova mensagem
+        nova_mensagem.save()
+    # carregando mensagens anteriores
+    msg_antes = Mensagem.objects.filter(cpf_med=chat_med,cpf_pac=chat_pac).values()
+    print(msg_antes)
+    template = loader.get_template('mensagens_paciente.html')
+    context = {
+        'msg_antes': msg_antes,
+        'chat_med': chat_med,
+    }
+    return HttpResponse(template.render(context, request))
+
+def chats_pac(request):
+    cpf_logged = request.session.get('cpf_logged') # cpf do usuario atual    
+    meds_antes = Mensagem.objects.filter(cpf_pac=cpf_logged).values_list('cpf_med').distinct()
+    chats_antes = Medico.objects.filter(cpf__in=meds_antes).values()
+    if request.method=='GET' and request.GET.get('msg')!=None:
+        request.session['cpf_med'] = request.GET.get('msg')
+        return redirect('mensagens_paciente')
+    template = loader.get_template('chats_paciente.html')
+    context = {
+        'chats_antes': chats_antes,
+    }
+    return HttpResponse(template.render(context, request))
+
+def mensagens_med(request):
+    cpf_logged = request.session.get('cpf_logged') # cpf do usuario(medico) atual
+    cpf_pac = request.session.get('cpf_pac') # cpf do paciente da conversa atual
+
+    chat_med = Medico.objects.get(cpf=cpf_logged) # medico atual
+    chat_pac = Paciente.objects.get(cpf=cpf_pac) # paciente atual
+
+    if request.method=='POST' and request.POST.get('message')!='': # se a mensagem não for nula
+        conteudo_mensagem = request.POST.get('message') # conteudo da mensagem
+        # nova mensagem
+        nova_mensagem = Mensagem(cpf_med=chat_med, cpf_pac=chat_pac, autor=cpf_logged, conteudo=conteudo_mensagem)
+        # salvar nova mensagem
+        nova_mensagem.save()
+
+    msg_antes = Mensagem.objects.filter(cpf_med=chat_med,cpf_pac=chat_pac).values()
+
+    template = loader.get_template('mensagens_medico.html')
+    context = {
+        'msg_antes': msg_antes,
+        'chat_pac': chat_pac,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def chats_med(request):
+    cpf_logged = request.session.get('cpf_logged') # cpf do usuario atual
+    
+    pacs_antes = Mensagem.objects.filter(cpf_med=cpf_logged).values_list('cpf_pac').distinct()
+    chats_antes = Paciente.objects.filter(cpf__in=pacs_antes).values()
+
+    if request.method=='GET' and request.GET.get('msg')!=None:
+        request.session['cpf_pac'] = request.GET.get('msg')
+        return redirect('mensagens_medico')
+    template = loader.get_template('chats_medico.html')
+    context = {
+        'chats_antes': chats_antes,
+    }
+    return HttpResponse(template.render(context, request))
+
