@@ -20,3 +20,11 @@ class Medico(models.Model):
 class Favoritos(models.Model):
     cpf_med = models.ForeignKey(Medico,on_delete=models.CASCADE)
     cpf_pac = models.ForeignKey(Paciente,on_delete=models.CASCADE)
+
+
+class Mensagem(models.Model):
+    cpf_med = models.ForeignKey(Medico,on_delete=models.CASCADE)
+    cpf_pac = models.ForeignKey(Paciente,on_delete=models.CASCADE)
+    autor = models.CharField(max_length=11, blank=False, null=False)
+    conteudo = models.TextField(max_length=250, blank=False, null=False)
+    horario = models.TimeField(auto_now=True)
