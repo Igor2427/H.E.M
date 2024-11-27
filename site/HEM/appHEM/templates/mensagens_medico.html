@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/mensagem_pac.css">
+    <link rel="stylesheet" href="../static/css/general.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PERFIL</h1>
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
+                <a href="{% url 'home_medico' %}" class="icon-btn"><img src="icon_search.png" alt="Buscar"></a>
+            </div>
+        </div>
+    </header>
+
+    {% csrf_token %}
+    <main>
+        <div class="med-nome">
+            <a href="{% url 'chats_medico' %}">
+                <button>< </button>
+            </a>     
+            {{chat_pac.nome}}
+        </div>
+        {% for x in msg_antes %}
+            <section class="campo">
+                {% if x.autor == x.cpf_med_id %}
+                    <div class="msg">
+                        <h2>{{x.conteudo}}</h2>
+                        <p class="horario">{{x.horario}}</p>
+                    </div>
+                {% else %}
+                    <div class="other">
+                        <h3>{{x.conteudo}}</h3>
+                        <p class="horario">{{x.horario}}</p>
+                    </div>
+                {% endif %}
+            </section>            
+            
+        {% endfor %}
+
+        <form action="." method="post">
+            {% csrf_token %}
+            <input type="text" id="message" name="message">
+            <button type="submit">Emvia</button>
+        </form>
+        
+    </main>
+
+
+
+    <footer>
+        <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
+        <a href="{% url 'home_medico' %}" class="footer-icon"><img src="icon_home.png" alt="Home"></a>
+        <a href="{% url 'chats_medico' %}" class="footer-icon active"><img src="icon_message.png" alt="Mensagens"></a>
+        <a href="{% url 'perfil_medico' %}" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
+    </footer>
+
+    <script src="../static/js/home_medico.js"></script>
+</body>
+</html>
