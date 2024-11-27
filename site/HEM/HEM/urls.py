@@ -31,6 +31,10 @@ urlpatterns = [
     path('edit-medico/', views.edit_medico, name='edit_medico'),
     path('perfil-paciente/', views.dados_pac, name='perfil_paciente'),
     path('edit-paciente/', views.edit_paciente, name='edit_paciente'),
+    path('mensagens-paciente/', views.mensagens_pac, name='mensagens_paciente'),
+    path('mensagens-medico/', views.mensagens_med, name='mensagens_medico'),
+    path('chats-paciente/', views.chats_pac, name='chats_paciente'),
+    path('chats-medico/', views.chats_med, name='chats_medico'),
     path('login/', views.login, name="login"),
     path('admin/',admin.site.urls),
 ]
