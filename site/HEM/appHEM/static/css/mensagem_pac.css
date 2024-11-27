@@ -1,0 +1,121 @@
+/* É usado tanto pra o paciente quanto pra o medico */
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: rgba(21, 154, 156, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-content h1 {
+    margin-left: 10px;
+}
+
+.header-icons {
+    display: flex;
+}
+
+.icon-btn {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mensagens */
+main {
+    display: flex;
+    flex-direction: column;
+}
+.med-nome{
+    background-color: white;
+    align-items: baseline;
+    border: 1px solid black;
+}
+.campo {
+    background-color: white;
+    align-items: center;
+}
+.msg {
+    background-color: rgba(21, 154, 156, 1);
+    color: white;
+    border-radius: 5px;
+    align-items: baseline;
+    display: block;
+    float: inline-end;
+    box-sizing: border-box;
+    margin-bottom: 3px;
+}
+.other{
+    background-color: rgb(138, 138, 138);
+    color: white;
+    border-radius: 5px;
+    align-items: baseline;
+    display: block;
+    float: inline-start;
+    box-sizing: border-box;
+    margin-bottom: 3px;
+}
+.msg h2{
+    font-size: 15px;
+    margin: 3px;
+}
+.other h3{
+    font-size: 15px;
+    margin: 3px;
+}
+.horario {
+    font-size: 10px;
+}
+.chats {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: rgba(21, 154, 156, 1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    margin-bottom: -42%;
+    width: 100%;
+}
+
+.footer-icon {
+    display: inline-block;
+}
+
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-icon.active img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
