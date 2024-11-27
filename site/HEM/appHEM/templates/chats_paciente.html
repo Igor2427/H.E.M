@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/mensagem_pac.css">
+    <link rel="stylesheet" href="../static/css/general.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>PERFIL</h1>
+            <div class="header-icons">
+                <a href="#" class="icon-btn"><img src="calendar_icon.png" alt="Calendário"></a>
+                <a href="{% url 'home_paciente' %}" class="icon-btn"><img src="icon_search.png" alt="Buscar"></a>
+            </div>
+        </div>
+    </header>
+
+    {% csrf_token %}
+    <main>
+        {% for x in chats_antes %}
+            
+            <form action="." method="get">
+                <input type="hidden" id="msg" name="msg" value="{{x.cpf}}">
+                <input type="submit" value="{{x.nome}}">
+            </form>
+        {% endfor %}
+        
+    </main>
+
+
+
+    <footer>
+        <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
+        <a href="{% url 'home_paciente' %}" class="footer-icon"><img src="icon_home.png" alt="Home"></a>
+        <a href="#" class="footer-icon active"><img src="icon_message.png" alt="Mensagens"></a>
+        <a href="{% url 'perfil_paciente' %}" class="footer-icon"><img src="icon_profile.png" alt="Perfil"></a>
+    </footer>
+
+    <script src="../static/js/home_paciente.js"></script>
+</body>
+</html>
