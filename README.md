@@ -58,6 +58,8 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 <img src="dupla1.jpg" width="300">
 <img src="dupla12.jpg" width="300">
 
+Gabriel e Mauricio iniciaram a programa em pares. Colocando o chat de comunicaçao tanto do medico quanto do paciente, logo vc seria emcaminha para uma area de login e senha e caso nao se lembra-se da senha, vc poderia redefini-la. dessa forma, vc teria acesso a plataforma onde estaria disponivel, historico, contato e agenda medica; assim como o paciente. todo portifólio estaria a disposicao. 
+
 <img src="dupla2.jpg" width="300">
 <img src="dupla22.jpg" width="300">
 
