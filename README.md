@@ -55,14 +55,11 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 ![](seleçãoMédica.jpg)
 
 ## Programação em partes
-![](dupla1.jpg)
+<img src="dupla1.jpg" width="300">
+<img src="dupla12.jpg" width="300">
 
-![](dupla12.jpg)
-
-![](dupla2.jpg)
-
-![](dupla22.jpg)
-
+<img src="dupla2.jpg" width="300">
+<img src="dupla22.jpg" width="300">
 
 ## Equipe do Projeto
 
