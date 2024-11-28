@@ -54,6 +54,16 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 
 ![](seleçãoMédica.jpg)
 
+## Programação em partes
+![](dupla1.jpg)
+
+![](dupla12.jpg)
+
+![](dupla2.jpg)
+
+![](dupla22.jpg)
+
+
 ## Equipe do Projeto
 
 - Igor Gabriel
