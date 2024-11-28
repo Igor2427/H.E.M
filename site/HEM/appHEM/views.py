@@ -95,6 +95,10 @@ def medicos(request):
             medicos = Medico.objects.filter(cpf__in=meds).values()
         elif show == 'naofavs':
             medicos = Medico.objects.exclude(cpf__in=meds).values()
+            
+    favs = Favoritos.objects.filter(cpf_pac=cpf_logged).values_list('cpf_med')
+    favoritos = Medico.objects.filter(cpf__in=favs).values()
+    
     template = loader.get_template('home_paciente.html')
     context = {
         'medicos': medicos,
