@@ -55,10 +55,21 @@
                         <p class="especialidade">{{x.especialidade}}</p>
                         <p class="descricao">{{x.descricao}}</p>
 
-                        <form action="." method="get" id="fav" name="fav" >
-                            <input type="hidden" id="fav" name="fav" value="{{x.cpf}}">
-                            <input type="submit" value="♥">
-                        </form>
+                        <div class="like-msg">
+                            <form action="." method="get" style="display: inline;">
+                                <input type="hidden" id="fav" name="fav" value="{{x.cpf}}">
+                                {% if x in favoritos %}
+                                    <input type="submit" value="❤️"> <!--♥-->
+                                {% else %}
+                                    <input type="submit" value="🖤"> <!--♥-->
+                                {% endif %}
+                                
+                            </form>
+                            <form action="." method="get">
+                                <input type="hidden" id="msg" name="msg" value="{{x.cpf}}">
+                                <input type="submit" value="💬"> <!--Chat-->
+                            </form>
+                        </div>
                         
                     </div>
                 </section>
