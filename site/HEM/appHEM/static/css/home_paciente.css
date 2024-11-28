@@ -82,31 +82,12 @@ main {
     margin-bottom: 10px;
 }
 
-.avaliacao {
-    color: #FFD700;
+.like-msg {
+  display: flex;
 }
 
-.btn-fav {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
-    /*background-color: rgb(241, 241, 241);
-    border-radius: 50%;*/
-    font-size: 25px;
-    width: 20px;
-    height: 20px;
-    color: rgb(255, 255, 255);
-}
-.btn-fav input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-.btn-fav input:checked+span{
-    -webkit-text-stroke-color: red;
-    color: red;    
-    transform: translateY(4px);
+.avaliacao {
+    color: #FFD700;
 }
 
 /* Footer */
