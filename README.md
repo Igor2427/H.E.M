@@ -38,7 +38,7 @@ As histórias do H.E.M estão sendo desenvolvidos através do JIRA. Nele, realiz
 
 **Sprint 3 - Jira com todas as implementações
 
-![](wh
+![](Captura%20de%20tela%202024-11-28%20220357.png)
 
 
 ## Screencast Figma
