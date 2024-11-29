@@ -12,7 +12,8 @@ O H.E.M é um projeto dedicado a facilitar a conexão entre pacientes e médicos
 - HTML
 - CSS
 - JS
-- Django 
+- Django
+- Python
 
 ## Visualização do Projeto
 
@@ -70,7 +71,7 @@ Logo, conclui-se que com a programação em par o projeto teve um estímulo em s
 
 <img src="dupla2.jpg" width="300"> <img src="dupla22.jpg" width="300">
 
-João Carlos, Guilherme e Igor ficaram responsáveis por adicionar o screencast para a realização dos testes automatizados.  
+João Carlos, Guilherme e Igor ficaram responsáveis por os métodos fora de programação, isto é, figma, Jira, screencasts, organização e github. 
 
 ## Equipe do Projeto
 
