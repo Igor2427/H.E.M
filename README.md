@@ -61,7 +61,7 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 ![](seleçãoMédica.jpg)
 
 **Diagrama avaliar médicos**
-![](WhatsApp%Image%2024-11-28%at%08.21.53.jpeg)
+![](WhatsApp%20Image%202024-11-28%20at%2008.21.53.jpeg)
 
 
 
