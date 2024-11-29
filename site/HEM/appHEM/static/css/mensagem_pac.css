@@ -13,7 +13,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     padding: 10px;
+    width: 100%;
+    margin-top: -38%;
 }
 
 .header-content h1 {
