@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Medico, Paciente
+from .models import Medico, Paciente, Favoritos, Mensagem
 from django.contrib import messages
 from django.http import HttpResponse
 from django.template import loader
