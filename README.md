@@ -59,14 +59,19 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 
 ![](seleçãoMédica.jpg)
 
-## Programação em partes
+## Programação em pares
 <img src="dupla1.jpg" width="300">
 <img src="dupla12.jpg" width="300">
 
-Gabriel e Mauricio iniciaram a programa em pares. Colocando o chat de comunicaçao tanto do medico quanto do paciente, logo vc seria emcaminha para uma area de login e senha e caso nao se lembra-se da senha, vc poderia redefini-la. dessa forma, vc teria acesso a plataforma onde estaria disponivel, historico, contato e agenda medica; assim como o paciente. todo portifólio estaria a disposicao. 
+Dividimos dois pares para a parte bruta do projeto: Maurício e Gabriel; Arthur e Júlia.
+O primeiro par ficou responsável pela implementação das funções dos médicos, já o segundo pela implementação das funções dos pacientes. Ao programar em pares, percebemos uma grande evolução no projeto, uma vez que algumas partes que pra um eram dificultosas, o outro conseguia cobrir. Quando tinha uma dificuldade maior, ambos pesquisavam e achavam mais rápido uma solução para o problema.
+Logo, conclui-se que com a programação em par o projeto teve um estímulo em seu andamento e conseguimos desenvolver algumas habilidades, como o compartilhamento de conhecimento, comunicação e melhores formas de pensar um código.
 
-<img src="dupla2.jpg" width="300">
-<img src="dupla22.jpg" width="300">
+
+
+
+<img src="dupla2.jpg" width="300"> <img src="dupla22.jpg" width="300">
+
 
 ## Equipe do Projeto
 
