@@ -68,6 +68,7 @@ def registro_pac(request):
 
 def medicos(request):
     medicos = Medico.objects.all().values()
+    cpf_logged = request.session.get('cpf_logged')
     if request.method=='GET' and request.GET.get('opcoes') != None:
         esp = request.GET.get('opcoes')
         if esp != '':
