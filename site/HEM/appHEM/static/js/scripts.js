@@ -1,3 +1,4 @@
+/*
 //Informa que o CPF deve ter 11 dígitos
 document.querySelector('input[name="cpf"]').addEventListener('input', function() {
     if (!this.validity.valid) {
@@ -13,4 +14,4 @@ document.querySelector('input[name="cpf"]').addEventListener('keypress', functio
       event.preventDefault(); // Impede a digitação de qualquer caractere que não seja um número
     }
   });
-  
+  */
