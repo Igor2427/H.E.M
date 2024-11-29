@@ -12,8 +12,10 @@ def login(request):
         senha = request.POST.get('senha')
 
         if Medico.objects.filter(cpf=cpf, senha=senha).first():
+            request.session['cpf_logged'] = cpf
             return redirect('home_medico')
         elif Paciente.objects.filter(cpf=cpf, senha=senha).first():
+            request.session['cpf_logged'] = cpf
             return redirect('home_paciente')
         else:
             messages.error(request, 'Usuário não encontrado ou senha incorreta!')
