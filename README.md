@@ -50,21 +50,6 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 
 - **Design no Figma:** [Acesse o design aqui](https://www.figma.com/design/QYBP6Imj2G5svue2oD7ptj/H.E.M?m=auto&t=DkIXqvCKssu7uQRm-6)
 
-## Diagrama de Atividades
-
-**Diagrama de cadastro e login:**
-
-![](diagramaCadastro-login.jpg)
-
-**Diagrama de seleção médica:**
-
-![](seleçãoMédica.jpg)
-
-**Diagrama avaliar médicos**
-
-![](WhatsApp%20Image%202024-11-28%20at%2008.21.53.jpeg)
-
-
 
 ## Programação em pares
 <img src="dupla1.jpg" width="300"> <img src="dupla12.jpg" width="300">
