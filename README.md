@@ -68,10 +68,9 @@ O primeiro par ficou responsável pela implementação das funções dos médico
 Logo, conclui-se que com a programação em par o projeto teve um estímulo em seu andamento e conseguimos desenvolver algumas habilidades, como o compartilhamento de conhecimento, comunicação e melhores formas de pensar um código.
 
 
-
-
 <img src="dupla2.jpg" width="300"> <img src="dupla22.jpg" width="300">
 
+João Carlos, Guilherme e Igor ficaram responsáveis por adicionar o screencast para a realização dos testes automatizados.  
 
 ## Equipe do Projeto
 
