@@ -98,6 +98,12 @@ def medicos(request):
             medicos = Medico.objects.filter(cpf__in=meds).values()
         elif show == 'naofavs':
             medicos = Medico.objects.exclude(cpf__in=meds).values()
+    elif request.method=='GET' and request.GET.get('msg')!=None:
+        print("a",request.GET.get('msg'))
+        request.session['cpf_med'] = request.GET.get('msg')
+        request.session['cpf_pac'] = cpf_logged
+
+        return redirect('mensagens_paciente')
             
     favs = Favoritos.objects.filter(cpf_pac=cpf_logged).values_list('cpf_med')
     favoritos = Medico.objects.filter(cpf__in=favs).values()
