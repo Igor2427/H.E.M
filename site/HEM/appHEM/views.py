@@ -105,6 +105,7 @@ def medicos(request):
     template = loader.get_template('home_paciente.html')
     context = {
         'medicos': medicos,
+        'favoritos': favoritos,
     }
     return HttpResponse(template.render(context, request))
 
