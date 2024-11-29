@@ -60,9 +60,14 @@ Clique no link abaixo para assistir ao screencast do design Figma do projeto H.E
 
 ![](seleçãoMédica.jpg)
 
+**Diagrama avaliar médicos**
+![](WhatsApp%Image%2024-11-28%at%08.21.53.jpeg)
+
+
+
 ## Programação em pares
-<img src="dupla1.jpg" width="300">
-<img src="dupla12.jpg" width="300">
+<img src="dupla1.jpg" width="300"> <img src="dupla12.jpg" width="300">
+
 
 Dividimos dois pares para a parte bruta do projeto: Maurício e Gabriel; Arthur e Júlia.
 O primeiro par ficou responsável pela implementação das funções dos médicos, já o segundo pela implementação das funções dos pacientes. Ao programar em pares, percebemos uma grande evolução no projeto, uma vez que algumas partes que pra um eram dificultosas, o outro conseguia cobrir. Quando tinha uma dificuldade maior, ambos pesquisavam e achavam mais rápido uma solução para o problema.
