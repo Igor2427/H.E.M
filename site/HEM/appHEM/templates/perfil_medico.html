@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../static/css/perfil.css">
+    <link rel="stylesheet" href="../static/css/perfil_medico.css">
     <link rel="stylesheet" href="../static/css/general.css">
 </head>
 <body>
@@ -18,22 +18,26 @@
         </div>
     </header>
 
-    <div >
-        <main>
-            <section class="perfil-card">
-                <img src="icon_profile.jpg" alt="{{med.nome}}" class="picture">
-            
-                <div class="card-info">
-                    <h2>{{med.nome}}</h2>                    
-                    <p >{{med.cpf}}</p>
-                    <p class="descricao">{{med.descricao}}</p>
-                </div>
-                  
-            </section>
-        </main>
-        
+    <main class="perfil-card">
+        <a href="{% url 'edit_medico' %}"> 
+            <button>edit</button>
+        </a>
     
-    </div>
+        <div class="perfil-info">
+            <img src="icon_profile.jpg" alt="{{med.nome}}" >
+            
+            <div class="ps">
+                <h2>{{med.nome}}</h2>
+                <p >{{med.cpf}}</p>
+                <p >{{med.email}}</p>
+                <p >{{med.crm}}</p>
+            </div>
+            
+        </div>
+            
+        <p >{{med.descricao}}</p>
+
+    </main>
 
     <footer>
         <a href="#" class="footer-icon"><img src="icon_file.png" alt="Agenda"></a>
